@@ -30,3 +30,4 @@
 
 - Access robot though SSH and go to naoqi folder. There run 
 	$ ./TreasureHunt
+
