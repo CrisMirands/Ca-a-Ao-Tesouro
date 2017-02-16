@@ -1,0 +1,40 @@
+// g++ haartest.cpp -o haartest `pkg-config --cflags --libs opencv`
+
+#include "ballDetector.hpp"
+
+#include "opencv2/objdetect/objdetect.hpp"
+#include "opencv2/highgui/highgui.hpp"
+#include "opencv2/imgproc/imgproc.hpp"
+
+
+ballDetector::ballDetector()
+{
+
+}
+
+voide ballDetector::getImage(char source)
+{
+	if(source == 'c')
+	{
+		VideoCapture cap(0); // open the default camera
+	    if(!cap.isOpened())  // check if we succeeded
+	        return -1;
+	    namedWindow("Ball",1);
+	    while(cap.isOpened())
+	    {
+	        Mat frame;
+	        cap >> frame;
+
+	        imshow( "Face", frame );
+	        if(waitKey(30) >= 0) break;
+	    }                   
+	}
+}
+
+int main(int argc, char const *argv[])
+{
+	ballDetector Ball;
+
+	Ball.getImage('c');
+	return 0;
+}

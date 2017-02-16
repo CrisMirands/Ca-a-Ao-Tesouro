@@ -1,0 +1,3 @@
+./ballDetector/build.sh
+./NAO/build_all.sh
+./voiceControl/build.sh
