@@ -1,3 +1,10 @@
+
+Treasure hunt game with NAO robot. Uses julius for voice interface and OpenCV for vision.
+Running in Ubuntu 14.04
+
+USAGE
+
+
 ##########################################
 # 	Setting Up Voice interface	 #
 ##########################################
